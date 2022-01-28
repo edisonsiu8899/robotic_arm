@@ -7,7 +7,7 @@ import sys, tty, termios, time
 motor_enable_pin = 17
 motor_direction_pin = 27
 motor_step_pin = 22
-delay = 3E-002              # By playing with this delay you can influence the rotational speed.
+delay = 3E-004              # By playing with this delay you can influence the rotational speed.
 pulses_per_rev = 400        # This can be configured on the driver using the DIP-switches
 io.setup(motor_enable_pin, io.OUT)
 io.setup(motor_direction_pin, io.OUT)
