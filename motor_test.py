@@ -4,9 +4,12 @@ import sys, tty, termios, time
 
 # This blocks of code defines the three GPIO
 # pins used for the stepper motor
-motor_enable_pin = 17
-motor_direction_pin = 27
-motor_step_pin = 22
+#motor_enable_pin = 17
+#motor_direction_pin = 27
+#motor_step_pin = 22
+motor_enable_pin = 2
+motor_direction_pin = 3
+motor_step_pin = 4
 delay = 3E-004              # By playing with this delay you can influence the rotational speed.
 pulses_per_rev = 400        # This can be configured on the driver using the DIP-switches
 io.setup(motor_enable_pin, io.OUT)
@@ -61,7 +64,7 @@ def step_reverse():
 
 # Setting the stepper pins to false so the motors will not move
 # until the user presses the first key
-io.output(motor_enable_pin, True)
+io.output(motor_enable_pin, False)
 io.output(motor_step_pin, False)
 
 
