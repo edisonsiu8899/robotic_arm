@@ -61,7 +61,7 @@ def step_reverse():
 
 # Setting the stepper pins to false so the motors will not move
 # until the user presses the first key
-io.output(motor_enable_pin, False)
+io.output(motor_enable_pin, True)
 io.output(motor_step_pin, False)
 
 
