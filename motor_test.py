@@ -66,10 +66,12 @@ io.output(motor_step_pin, False)
 
 
 # Print instructions for when the user has an interface
+print("Program Initiated...")
 print("e/d: enable/disable")
 print("f/r: step forward / reverse")
 print("g/t: rotate forward / reverse")
 print("x: exit")
+
 
 # Infinite loop that will not end until the user presses the
 # exit key
