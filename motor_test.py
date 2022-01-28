@@ -77,7 +77,7 @@ while True:
     # Keyboard character retrieval method is called and saved
     # into variable
     char = getch()
-    print char	
+    print(char)	
 
     # The stepper will be enabled when the "e" key is pressed
     if (char == "e"):
