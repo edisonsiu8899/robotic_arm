@@ -10,11 +10,20 @@ import sys, tty, termios, time
 motor_enable_pin = 2
 motor_direction_pin = 3
 motor_step_pin = 4
+
+motor_enable_pin_2 = 14
+motor_direction_pin_2 = 15
+motor_step_pin_2 = 18
+
 delay = 3E-004              # By playing with this delay you can influence the rotational speed.
 pulses_per_rev = 400        # This can be configured on the driver using the DIP-switches
 io.setup(motor_enable_pin, io.OUT)
 io.setup(motor_direction_pin, io.OUT)
 io.setup(motor_step_pin, io.OUT)
+
+io.setup(motor_enable_pin_2, io.OUT)
+io.setup(motor_direction_pin_2, io.OUT)
+io.setup(motor_step_pin_2, io.OUT)
 
 
 # The getch method can determine which key has been pressed
@@ -42,23 +51,30 @@ def getch():
 
 def stepper_enable():
     io.output(motor_enable_pin, False)
+    io.output(motor_enable_pin_2, False)
 
 def stepper_disable():
     io.output(motor_enable_pin, True)
+    io.output(motor_enable_pin_2, True)
 
 def step_once():
     io.output(motor_step_pin, True)
+    io.output(motor_step_pin_2, True)
     time.sleep(delay)
     io.output(motor_step_pin, False)
+    io.output(motor_step_pin_2, False)
     time.sleep(delay)
 
 def step_forward():
     io.output(motor_direction_pin, True)
+    io.output(motor_direction_pin_2, True)
     time.sleep(delay)
     step_once()
+    
 
 def step_reverse():
     io.output(motor_direction_pin, False)
+    io.output(motor_direction_pin_2, False)
     time.sleep(delay)
     step_once()
 
@@ -66,6 +82,8 @@ def step_reverse():
 # until the user presses the first key
 io.output(motor_enable_pin, False)
 io.output(motor_step_pin, False)
+io.output(motor_enable_pin_2, False)
+io.output(motor_step_pin_2, False)
 
 
 # Print instructions for when the user has an interface
