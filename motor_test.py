@@ -4,10 +4,10 @@ import sys, tty, termios, time
 
 # This blocks of code defines the three GPIO
 # pins used for the stepper motor
-motor_enable_pin = 22
+motor_enable_pin = 17
 motor_direction_pin = 27
-motor_step_pin = 17
-delay = 3E-004              # By playing with this delay you can influence the rotational speed.
+motor_step_pin = 22
+delay = 3E-002              # By playing with this delay you can influence the rotational speed.
 pulses_per_rev = 400        # This can be configured on the driver using the DIP-switches
 io.setup(motor_enable_pin, io.OUT)
 io.setup(motor_direction_pin, io.OUT)
@@ -77,7 +77,7 @@ while True:
     # Keyboard character retrieval method is called and saved
     # into variable
     char = getch()
-    print(char)	
+    print char	
 
     # The stepper will be enabled when the "e" key is pressed
     if (char == "e"):
