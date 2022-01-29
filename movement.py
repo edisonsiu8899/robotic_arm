@@ -34,11 +34,12 @@ if __name__ == '__main__':
     motor_file = open('motor_parameters.json', "r")
     motor_param = json.load(motor_file)
     robot_arm.setup(motor_param)
+    robot_arm.stepper_enable(motor_param)
 
     speed_file = open('speed_parameters.json', "r")
     speed_param = json.load(speed_file)
-    print(speed_param)
 
+    print("Beginning Movement")
     io.output(motor_param[str(1)]["direction_pin"], True)
     time.sleep(speed_param["speed"]["delay"])
     io.output(motor_param[str(1)]["step_pin"], True)
