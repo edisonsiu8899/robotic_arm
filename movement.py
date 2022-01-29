@@ -7,8 +7,26 @@ class robot_arm:
     def __init__():
         pass
 
+    def inverse_kinematics():
+        print("Hello")
+
+    def forward_kinematics():
+        print("Hello")
+
     def motor(num, pos_x, pos_y):
         print("Hello")
+
+    def motor_test(num, dir):
+        for x in range(0, speed_param["speed"]["pulses_per_rev"]):
+            if(dir == "f"):
+                io.output(motor_param[str(num)]["direction_pin"], True)
+            else if(dir == "b"):
+                io.output(motor_param[str(num)]["direction_pin"], False)
+            time.sleep(speed_param["speed"]["delay"])
+            io.output(motor_param[str(num)]["step_pin"], True)
+            time.sleep(speed_param["speed"]["delay"])
+            io.output(motor_param[str(num)]["step_pin"], False)
+            time.sleep(speed_param["speed"]["delay"])
     
     def setup(motor_param):
         print("Initializing Motors...")
@@ -42,20 +60,14 @@ if __name__ == '__main__':
     print("Beginning Movement")
     print(motor_param[str(1)]["direction_pin"])
     print(speed_param["speed"]["delay"])
-    for x in range(0, speed_param["speed"]["pulses_per_rev"]):
-        io.output(motor_param[str(1)]["direction_pin"], True)
-        time.sleep(speed_param["speed"]["delay"])
-        io.output(motor_param[str(1)]["step_pin"], True)
-        time.sleep(speed_param["speed"]["delay"])
-        io.output(motor_param[str(1)]["step_pin"], False)
-        time.sleep(speed_param["speed"]["delay"])
-
-    for x in range(0, speed_param["speed"]["pulses_per_rev"]):
-        io.output(motor_param[str(1)]["direction_pin"], False)
-        time.sleep(speed_param["speed"]["delay"])
-        io.output(motor_param[str(1)]["step_pin"], True)
-        time.sleep(speed_param["speed"]["delay"])
-        io.output(motor_param[str(1)]["step_pin"], False)
-        time.sleep(speed_param["speed"]["delay"])
+    robot_arm.motor_test(2, "f")
+    robot_arm.motor_test(2, "f")
+    robot_arm.motor_test(3, "f")
+    robot_arm.motor_test(3, "f")
+    robot_arm.motor_test(6, "f")
+    robot_arm.motor_test(6, "f")
+    robot_arm.motor_test(3, "r")
+    robot_arm.motor_test(6, "r")
+    robot_arm.motor_test(6, "r")
 
     io.cleanup()
