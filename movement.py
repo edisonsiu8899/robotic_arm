@@ -63,10 +63,11 @@ if __name__ == '__main__':
     #Note Motor 2 forward is bakcwards
     robot_arm.motor_test(2, "r")
     robot_arm.motor_test(2, "r")
-    robot_arm.motor_test(3, "r")
-    robot_arm.motor_test(3, "r")
-    robot_arm.motor_test(6, "r")
-    robot_arm.motor_test(6, "r")
+    robot_arm.motor_test(3, "f")
+    robot_arm.motor_test(3, "f")
+    robot_arm.motor_test(3, "f")
+    #robot_arm.motor_test(6, "r")
+    #robot_arm.motor_test(6, "r")
 
 
     io.cleanup()
