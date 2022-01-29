@@ -60,13 +60,14 @@ if __name__ == '__main__':
     print("Beginning Movement")
     print(motor_param[str(1)]["direction_pin"])
     print(speed_param["speed"]["delay"])
+    #Note Motor 3 forward is bakcwards
     robot_arm.motor_test(2, "f")
     robot_arm.motor_test(2, "f")
-    robot_arm.motor_test(3, "f")
-    robot_arm.motor_test(3, "f")
-    robot_arm.motor_test(6, "f")
-    robot_arm.motor_test(6, "f")
     robot_arm.motor_test(3, "r")
+    robot_arm.motor_test(3, "r")
+    robot_arm.motor_test(6, "f")
+    robot_arm.motor_test(6, "f")
+    robot_arm.motor_test(3, "f")
     robot_arm.motor_test(6, "r")
     robot_arm.motor_test(6, "r")
 
