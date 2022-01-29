@@ -40,6 +40,7 @@ if __name__ == '__main__':
     speed_param = json.load(speed_file)
 
     print("Beginning Movement")
+    print(motor_param[str(1)]["direction_pin"])
     io.output(motor_param[str(1)]["direction_pin"], True)
     time.sleep(speed_param["speed"]["delay"])
     io.output(motor_param[str(1)]["step_pin"], True)
