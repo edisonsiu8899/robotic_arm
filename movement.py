@@ -49,11 +49,11 @@ if __name__ == '__main__':
     io.output(motor_param[str(1)]["step_pin"], False)
     time.sleep(speed_param["speed"]["delay"])
 
-    io.output(motor_param[str(1)]["direction_pin"], False)
-    time.sleep(speed_param["speed"]["delay"])
-    io.output(motor_param[str(1)]["step_pin"], True)
-    time.sleep(speed_param["speed"]["delay"])
-    io.output(motor_param[str(1)]["step_pin"], False)
-    time.sleep(speed_param["speed"]["delay"])
+    #io.output(motor_param[str(1)]["direction_pin"], False)
+    #time.sleep(speed_param["speed"]["delay"])
+    #io.output(motor_param[str(1)]["step_pin"], True)
+    #time.sleep(speed_param["speed"]["delay"])
+    #io.output(motor_param[str(1)]["step_pin"], False)
+    #time.sleep(speed_param["speed"]["delay"])
 
     io.cleanup()
