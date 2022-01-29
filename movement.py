@@ -64,8 +64,8 @@ if __name__ == '__main__':
     #Note Motor 6 only goes in one direction
     #robot_arm.motor_test(2, "r")
     #robot_arm.motor_test(2, "r")
-    robot_arm.motor_test(3, "f")
-    robot_arm.motor_test(3, "f")
+    robot_arm.motor_test(3, "r")
+    robot_arm.motor_test(3, "r")
     #robot_arm.motor_test(6, "f")
     #robot_arm.motor_test(6, "r")
 
