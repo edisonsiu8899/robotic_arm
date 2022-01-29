@@ -1,0 +1,6 @@
+{
+    "speed" : {
+        "delay" : 3E-004,
+        "pulses_per_rev" : 400
+    }
+}

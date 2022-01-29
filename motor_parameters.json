@@ -1,0 +1,32 @@
+{
+    "1" : {
+        "enable_pin" : 2,
+        "direction_pin" : 3,
+        "step_pin" : 4
+    },
+    "2" : {
+        "enable_pin" : 14,
+        "direction_pin" : 15,
+        "step_pin" : 18
+    },
+    "3" : {
+        "enable_pin" : 17,
+        "direction_pin" : 27,
+        "step_pin" : 22
+    },
+    "4" : {
+        "enable_pin" : 23,
+        "direction_pin" : 24,
+        "step_pin" : 25
+    },
+    "5" : {
+        "enable_pin" : 10,
+        "direction_pin" : 9,
+        "step_pin" : 11
+    },
+    "6" : {
+        "enable_pin" : 8,
+        "direction_pin" : 7,
+        "step_pin" : 1
+    }
+}

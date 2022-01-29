@@ -1,0 +1,36 @@
+{
+    "speed" : {
+        "delay" : 3E-004,
+        "pulses_per_rev" : 400
+    },
+    "motor_1" : {
+        "enable_pin" : 2,
+        "direction_pin" : 3,
+        "step_pin" : 4
+    },
+    "motor_2" : {
+        "enable_pin" : 14,
+        "direction_pin" : 15,
+        "step_pin" : 18
+    },
+    "motor_3" : {
+        "enable_pin" : 17,
+        "direction_pin" : 27,
+        "step_pin" : 22
+    },
+    "motor_4" : {
+        "enable_pin" : 23,
+        "direction_pin" : 24,
+        "step_pin" : 25
+    },
+    "motor_5" : {
+        "enable_pin" : 10,
+        "direction_pin" : 9,
+        "step_pin" : 11
+    },
+    "motor_6" : {
+        "enable_pin" : 8,
+        "direction_pin" : 7,
+        "step_pin" : 1
+    }
+}
