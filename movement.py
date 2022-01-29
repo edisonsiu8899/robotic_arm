@@ -20,7 +20,7 @@ class robot_arm:
         for x in range(0, speed_param["speed"]["pulses_per_rev"]):
             if(dir == "f"):
                 io.output(motor_param[str(num)]["direction_pin"], True)
-            else if(dir == "b"):
+            elif(dir == "r"):
                 io.output(motor_param[str(num)]["direction_pin"], False)
             time.sleep(speed_param["speed"]["delay"])
             io.output(motor_param[str(num)]["step_pin"], True)
