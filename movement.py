@@ -61,6 +61,7 @@ if __name__ == '__main__':
     print(motor_param[str(1)]["direction_pin"])
     print(speed_param["speed"]["delay"])
     #Note Motor 2 forward is bakcwards
+    #Note Motor 6 only goes in one direction
     robot_arm.motor_test(2, "r")
     robot_arm.motor_test(2, "r")
     robot_arm.motor_test(3, "f")
