@@ -114,8 +114,8 @@ def step_once():
     time.sleep(delay)
 
 def step_forward():
-    io.output(motor_direction_pin_1, True)
-    io.output(motor_direction_pin_2, True)
+    #io.output(motor_direction_pin_1, True)
+    #io.output(motor_direction_pin_2, True)
     io.output(motor_direction_pin_3, True)
     io.output(motor_direction_pin_4, True)
     io.output(motor_direction_pin_5, True)
@@ -125,8 +125,8 @@ def step_forward():
     
 
 def step_reverse():
-    io.output(motor_direction_pin_1, False)
-    io.output(motor_direction_pin_2, False)
+    #io.output(motor_direction_pin_1, False)
+    #io.output(motor_direction_pin_2, False)
     io.output(motor_direction_pin_3, False)
     io.output(motor_direction_pin_4, False)
     io.output(motor_direction_pin_5, False)
